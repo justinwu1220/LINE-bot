@@ -147,7 +147,7 @@ class TocMachine(GraphMachine):
             list_block = newanime_item.select_one('.theme-list-block')
             anime_items = list_block.select('a.theme-list-main')
             if anime_items == []:
-                info_all = "not found"
+                info_all = "查無結果"
             else:
                 for anime_item in anime_items:
                     anime_name = anime_item.select_one('.theme-name').text.strip() # 動畫名稱
