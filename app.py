@@ -17,29 +17,26 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["idle", "ready", "result", "search"],
+    states=["idle", "start", "new_anim", "search_anim"],
     transitions=[
         {
             "trigger": "get_msg",
             "source": "idle",
             "dest": "ready",
-            "conditions": "is_getting_search",
         },
         {
             "trigger": "get_msg",
-            "source": "ready",
-            "dest": "search",
+            "source": "start",
+            "dest": "new_anim",
+            "conditions": "is_getting_new"
         },
         {
-            "trigger": "finished",
-            "source": "search",
-            "dest": "result",
+            "trigger": "get_msg",
+            "source": "start",
+            "dest": "search_anim",
+            "conditions": "is_getting_search"
         },
-        {
-            "trigger": "go_idle",
-            "source": "result",
-            "dest": "idle",
-        },
+
     ],
     initial="idle",
     auto_transitions=False,
