@@ -10,40 +10,50 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from fsm import TocMachine
 from utils import send_text_message
 
-#import chromedriver_autoinstaller
-#chromedriver_autoinstaller.install()
 
 load_dotenv()
 
 
 machine = TocMachine(
-    states=["idle", "start", "new_anim", "search_anim", "today_anim", "searching"],
+    states=["idle", "awake", "command_failed", "new_anim", "search_anim", "today_anim", "hot_anim", "searching"],
     transitions=[
         {
             "trigger": "get_msg",
             "source": "idle",
-            "dest": "start",
+            "dest": "awake",
         },
         {
             "trigger": "get_msg",
-            "source": "start",
+            "source": "awake",
             "dest": "new_anim",
             "conditions": "is_getting_new"
         },
         {
             "trigger": "get_msg",
-            "source": "start",
+            "source": "awake",
+            "dest": "hot_anim",
+            "conditions": "is_getting_hot"
+        },
+        {
+            "trigger": "get_msg",
+            "source": "awake",
             "dest": "today_anim",
             "conditions": "is_getting_today"
         },
         {
+            "trigger": "get_msg",
+            "source": "awake",
+            "dest": "command_failed",
+            "conditions": "is_getting_nothing"
+        },
+        {
             "trigger": "finished",
-            "source": ["new_anim", "searching", "today_anim"],
-            "dest": "start",
+            "source": ["new_anim", "searching", "today_anim", "hot_anim", "command_failed"],
+            "dest": "awake",
         },
         {
             "trigger": "get_msg",
-            "source": "start",
+            "source": "awake",
             "dest": "search_anim",
             "conditions": "is_getting_search"
         },
