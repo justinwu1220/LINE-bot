@@ -1,9 +1,10 @@
 from transitions.extensions import GraphMachine
 
-from utils import send_text_message
+from utils import send_text_message, send_flex_message
 from selenium import webdriver
 import time
 import os
+
 
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
@@ -39,7 +40,7 @@ class TocMachine(GraphMachine):
         time.sleep(1)
         game_list = driver.find_elements_by_class_name("game-info-wrapper")
         num_of_list = len(game_list)
-
+        list_arr = []
         str_arr = str()
         if num_of_list == 0:
             str_arr = "Not found"
@@ -51,10 +52,13 @@ class TocMachine(GraphMachine):
                 old_price = game.find_element_by_class_name("price-old").get_attribute('textContent')
                 new_price = game.find_element_by_class_name("game-price-new").get_attribute('textContent')
                 discount = game.find_element_by_class_name("badge").get_attribute('textContent')
-                str_arr += "\n"+name+"\ncurrent price: "+new_price+"\toriginal price: "+old_price+"\tdiscount: "+discount+"\n"
+                li =[name, old_price, new_price, discount]
+                list_arr[i] = li
+                #str_arr += "\n"+name+"\ncurrent price: "+new_price+"\toriginal price: "+old_price+"\tdiscount: "+discount+"\n"
             
         driver.close()
-        self.finished(event, str_arr)    
+        #self.finished(event, str_arr)   
+        self.finished(event, list_arr) 
 
     def on_enter_result(self, event, str_arr):
         reply_token = event.reply_token
