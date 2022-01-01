@@ -14,7 +14,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "state2"],
+    states=["idle", "ready", "result"],
     transitions=[
         {
             "trigger": "get_msg",
@@ -38,7 +38,7 @@ machine = TocMachine(
             "dest": "idle",
         },
     ],
-    initial="user",
+    initial="idle",
     auto_transitions=False,
     show_conditions=True,
 )
