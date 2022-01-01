@@ -17,18 +17,26 @@ machine = TocMachine(
     states=["user", "state1", "state2"],
     transitions=[
         {
-            "trigger": "advance",
-            "source": "user",
-            "dest": "state1",
-            "conditions": "is_going_to_state1",
+            "trigger": "get_msg",
+            "source": "idle",
+            "dest": "ready",
+            "conditions": "is_getting_search",
         },
         {
-            "trigger": "advance",
-            "source": "user",
-            "dest": "state2",
-            "conditions": "is_going_to_state2",
+            "trigger": "get_msg",
+            "source": "ready",
+            "dest": "search",
         },
-        {"trigger": "go_back", "source": ["state1", "state2"], "dest": "user"},
+        {
+            "trigger": "finished",
+            "source": "search",
+            "dest": "result",
+        },
+        {
+            "trigger": "go_idle",
+            "source": "result",
+            "dest": "idle",
+        },
     ],
     initial="user",
     auto_transitions=False,
@@ -103,9 +111,7 @@ def webhook_handler():
             continue
         print(f"\nFSM STATE: {machine.state}")
         print(f"REQUEST BODY: \n{body}")
-        response = machine.advance(event)
-        if response == False:
-            send_text_message(event.reply_token, "Not Entering any State")
+        machine.get_msg(event)
 
     return "OK"
 
