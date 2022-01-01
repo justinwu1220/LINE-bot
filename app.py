@@ -14,7 +14,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["idle", "ready", "result"],
+    states=["idle", "ready", "result", "search"],
     transitions=[
         {
             "trigger": "get_msg",
