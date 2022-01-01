@@ -53,7 +53,7 @@ class TocMachine(GraphMachine):
                 new_price = game.find_element_by_class_name("game-price-new").get_attribute('textContent')
                 discount = game.find_element_by_class_name("badge").get_attribute('textContent')
                 li =[name, old_price, new_price, discount]
-                list_arr[i] = li
+                list_arr.append(li)
                 #str_arr += "\n"+name+"\ncurrent price: "+new_price+"\toriginal price: "+old_price+"\tdiscount: "+discount+"\n"
             
         driver.close()
