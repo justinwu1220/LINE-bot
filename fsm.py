@@ -1,36 +1,63 @@
 from transitions.extensions import GraphMachine
 
 from utils import send_text_message
-
+from selenium import webdriver
+import time
+import os
 
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
         self.machine = GraphMachine(model=self, **machine_configs)
 
-    def is_going_to_state1(self, event):
+    def is_getting_search(self, event):
         text = event.message.text
-        return text.lower() == "go to state1"
+        return text.lower() == "search"
 
-    def is_going_to_state2(self, event):
-        text = event.message.text
-        return text.lower() == "go to state2"
-
-    def on_enter_state1(self, event):
-        print("I'm entering state1")
-
+    def on_enter_ready(self, event):
         reply_token = event.reply_token
-        send_text_message(reply_token, "Trigger state1")
-        self.go_back()
+        send_text_message(reply_token, "Please enter the name of game")
 
-    def on_exit_state1(self):
-        print("Leaving state1")
+    def on_enter_search(self, event):
+        url = "https://gg.deals/deals/?store=4&type=1,2,3,7,9,10,11"
+        GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+        CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+        search_key = event.message.text
 
-    def on_enter_state2(self, event):
-        print("I'm entering state2")
+        options = webdriver.ChromeOptions()
+        options.binary_location = GOOGLE_CHROME_PATH
+        options.add_argument("--headless")
+        options.add_argument('--disable-gpu')
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
+        options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+        options.add_experimental_option('useAutomationExtension', False)
+        options.add_experimental_option("prefs", {"profile.password_manager_enabled": False, "credentials_enable_service": False})
 
-        reply_token = event.reply_token
-        send_text_message(reply_token, "Trigger state2")
-        self.go_back()
+        driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+        driver.get(url)
+        
+        element = driver.find_element_by_id("search-by-main-name")
+        element.send_keys(search_key)
+        time.sleep(1)
+        game_list = driver.find_elements_by_class_name("game-info-wrapper")
+        num_of_list = len(game_list)
 
-    def on_exit_state2(self):
-        print("Leaving state2")
+        str_arr = str()
+        if num_of_list == 0:
+            str_arr = "Not found"
+
+        else:
+            for i in range(num_of_list):
+                game = game_list[i]
+                name = game.find_element_by_class_name("game-info-title-wrapper").get_attribute('textContent')
+                old_price = game.find_element_by_class_name("price-old").get_attribute('textContent')
+                new_price = game.find_element_by_class_name("game-price-new").get_attribute('textContent')
+                discount = game.find_element_by_class_name("badge").get_attribute('textContent')
+                str_arr += "\n"+name+"\ncurrent price: "+new_price+"\toriginal price: "+old_price+"\tdiscount: "+discount+"\n"
+            
+        driver.close()
+        self.finished(event, str_arr)    
+
+    def on_enter_result(self, event, str_arr):
+        send_text_message(reply_token, str_arr)
+        self.go_idle
