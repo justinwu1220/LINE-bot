@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e1d83bb6db6e56cef0ace50c1f2785de10541bf937fde8b4329592f59a737eec"
+            "sha256": "a7084f56b3d24f25ede57a0a8987450397a4ba736d8450061edce84a452a0c0b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,14 @@
             "markers": "python_version >= '3'",
             "version": "==2.0.9"
         },
+        "chromedriver-autoinstaller": {
+            "hashes": [
+                "sha256:7bafc2c1730fc044d078a9e2e31c59c8015077c7e4de3903f7f14693af03bfbe",
+                "sha256:d2d934fed5a8c27352e279c8c398ecbc570f5aebb4a877add05dc4703ce91bc8"
+            ],
+            "index": "pypi",
+            "version": "==0.3.1"
+        },
         "click": {
             "hashes": [
                 "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3",
@@ -38,14 +46,6 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==8.0.3"
-        },
-        "colorama": {
-            "hashes": [
-                "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b",
-                "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"
-            ],
-            "markers": "platform_system == 'Windows'",
-            "version": "==0.4.4"
         },
         "dataclasses": {
             "hashes": [
