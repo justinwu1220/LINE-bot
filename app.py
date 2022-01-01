@@ -22,7 +22,7 @@ machine = TocMachine(
         {
             "trigger": "get_msg",
             "source": "idle",
-            "dest": "ready",
+            "dest": "start",
         },
         {
             "trigger": "get_msg",
