@@ -19,12 +19,10 @@ class TocMachine(GraphMachine):
 
     def on_enter_search(self, event):
         url = "https://gg.deals/deals/?store=4&type=1,2,3,7,9,10,11"
-        GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
-        CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
         search_key = event.message.text
 
         options = webdriver.ChromeOptions()
-        options.binary_location = GOOGLE_CHROME_PATH
+        options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         options.add_argument("--headless")
         options.add_argument('--disable-gpu')
         options.add_argument("--disable-dev-shm-usage")
@@ -33,7 +31,7 @@ class TocMachine(GraphMachine):
         options.add_experimental_option('useAutomationExtension', False)
         options.add_experimental_option("prefs", {"profile.password_manager_enabled": False, "credentials_enable_service": False})
 
-        driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
         driver.get(url)
         
         element = driver.find_element_by_id("search-by-main-name")
