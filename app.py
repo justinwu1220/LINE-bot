@@ -10,14 +10,14 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from fsm import TocMachine
 from utils import send_text_message
 
-import chromedriver_autoinstaller
-chromedriver_autoinstaller.install()
+#import chromedriver_autoinstaller
+#chromedriver_autoinstaller.install()
 
 load_dotenv()
 
 
 machine = TocMachine(
-    states=["idle", "start", "new_anim", "search_anim"],
+    states=["idle", "start", "new_anim", "search_anim", "today_anim", "searching"],
     transitions=[
         {
             "trigger": "get_msg",
@@ -33,8 +33,24 @@ machine = TocMachine(
         {
             "trigger": "get_msg",
             "source": "start",
+            "dest": "today_anim",
+            "conditions": "is_getting_today"
+        },
+        {
+            "trigger": "finished",
+            "source": ["new_anim", "searching", "today_anim"],
+            "dest": "start",
+        },
+        {
+            "trigger": "get_msg",
+            "source": "start",
             "dest": "search_anim",
             "conditions": "is_getting_search"
+        },
+        {
+            "trigger": "get_msg",
+            "source": "search_anim",
+            "dest": "searching",
         },
 
     ],
