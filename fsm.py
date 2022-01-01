@@ -59,4 +59,4 @@ class TocMachine(GraphMachine):
     def on_enter_result(self, event, str_arr):
         reply_token = event.reply_token
         send_text_message(reply_token, str_arr)
-        self.go_idle
+        self.go_idle()
