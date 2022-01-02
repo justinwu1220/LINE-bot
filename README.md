@@ -5,6 +5,7 @@
 >   - Windows 10 WSL1
 >   - Ubuntu 18.04
 >   - Heroku
+>   - Ngrok
 >   - Python 3.6.9
 
 > 技術
