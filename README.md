@@ -9,17 +9,13 @@
 
 > 技術
 >   - 網路爬蟲
->     - beautifulsoup4
+>     - B eautifulsoup4
 >   - 回應功能
 >     - Line Messaging API
 ## 介紹
 ### 基本資訊
 
 動畫瘋查詢機器人
-
-
-         
-
 
 ### 功能
 - 快速查詢站上TOP3近期人氣動畫
@@ -46,7 +42,9 @@
   - 搜尋
     - 輸入關鍵字搜尋動畫
     - 獲取相關作品連結
-    
+
+### FSM grapth
+![](https://imgur.com/a/9jsoQjw)
   
 
 
