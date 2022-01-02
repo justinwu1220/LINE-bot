@@ -11,6 +11,7 @@
 >     - beautifulsoup4
 >   - 回應功能
 >     - Line Messaging API
+         
 > 環境
 >   - Windows 10 WSL1
 >   - Ubuntu 18.04
