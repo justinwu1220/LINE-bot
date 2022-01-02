@@ -60,7 +60,7 @@
     - 獲取相關作品連結
   <p align=left>
        <img src="https://i.imgur.com/4v76Frr.jpg" width="300" height="600"><br>
-       <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="100">
+       <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="150">
   </p>
   
   點擊觀看按鈕可跳至影片連結
