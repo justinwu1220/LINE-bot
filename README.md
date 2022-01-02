@@ -37,7 +37,7 @@
 - 操作指令
   - 熱門
     - 獲取TOP3人氣動畫連結
-  ![](https://i.imgur.com/FExKQuV.jpg)
+![](https://i.imgur.com/FExKQuV.jpg)
   
   - 今日更新
     - 獲取今日更新動畫連結
