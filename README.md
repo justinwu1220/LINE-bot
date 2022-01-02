@@ -40,19 +40,19 @@
   - 熱門
     - 獲取TOP3人氣動畫連結
   <p align=left>
-    <img src="https://i.imgur.com/FExKQuV.jpg" width="300" height="700">
+    <img src="https://i.imgur.com/FExKQuV.jpg" width="300" height="800">
   </p>
   
   - 今日更新
     - 獲取今日更新動畫連結
   <p align=left>
-      <img src="https://i.imgur.com/QMBn80W.jpg" width="300" height="700">
+      <img src="https://i.imgur.com/QMBn80W.jpg" width="300" height="800">
   </p>
   
   - 本季新番
     - 獲取最近連載動畫連結
   <p align=left>
-      <img src="https://i.imgur.com/UQZY94n.jpg" width="300" height="700">
+      <img src="https://i.imgur.com/UQZY94n.jpg" width="300" height="800">
   </p>
   
   - 搜尋
@@ -60,12 +60,12 @@
     - 獲取相關作品連結
   <p align=left>
        <img src="https://i.imgur.com/4v76Frr.jpg" width="300" height="600"><br>
-       <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="200">
+       <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="100">
   </p>
   
   點擊觀看按鈕可跳至影片連結
   <p align=left>
-      <img src="https://i.imgur.com/uDzTRSx.jpg" width="300" height="700">
+      <img src="https://i.imgur.com/uDzTRSx.jpg" width="300" height="800">
   </p>
   
 ### FSM grapth
