@@ -39,9 +39,9 @@
 - 啟動
   - 進入line聊天介面後，輸入任意文字訊息
   - 取得操作指令，並輸入欲執行功能
-  <p align=left>
-    <img src="https://i.imgur.com/MaxErXZ.jpg" width="300" height="200">
-  </p>
+    <p align=left>
+      <img src="https://i.imgur.com/MaxErXZ.jpg" width="300" height="200">
+    </p>
 - 操作指令
   - 熱門
     - 獲取TOP3人氣動畫連結
