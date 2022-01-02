@@ -17,7 +17,9 @@
 ### 基本資訊
 
 動畫瘋查詢機器人
-![](https://qr-official.line.me/sid/L/019fgowc.png)
+  <p align=left>
+      <img src="https://qr-official.line.me/sid/L/019fgowc.png" width="300" height="300">
+  </p>
 
 ### 功能
 - 快速查詢站上TOP3近期人氣動畫
