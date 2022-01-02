@@ -32,18 +32,24 @@
 - 啟動
   - 進入line聊天介面後，輸入任意文字訊息
   - 取得操作指令，並輸入欲執行功能
+  ![](https://i.imgur.com/MaxErXZ.jpg)
 - 操作指令
   - 熱門
     - 獲取TOP3人氣動畫連結
     ![](https://i.imgur.com/FExKQuV.jpg)
   - 今日更新
     - 獲取今日更新動畫連結
+    ![](https://i.imgur.com/QMBn80W.jpg)
   - 本季新番
     - 獲取最近連載動畫連結
+    ![](https://i.imgur.com/UQZY94n.jpg)
   - 搜尋
     - 輸入關鍵字搜尋動畫
     - 獲取相關作品連結
-
+    ![](https://i.imgur.com/4v76Frr.jpg)
+    ![](https://i.imgur.com/XlP2SwE.jpg)
+  點擊觀看按鈕可跳至影片連結
+  ![](https://i.imgur.com/uDzTRSx.jpg)
 ### FSM grapth
 ![](https://i.imgur.com/nf5HLi1.png)
   
