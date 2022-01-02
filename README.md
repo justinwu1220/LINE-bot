@@ -39,27 +39,39 @@
 - 操作指令
   - 熱門
     - 獲取TOP3人氣動畫連結
-![](https://i.imgur.com/FExKQuV.jpg)
+  <p align=center>
+    <img src="https://i.imgur.com/FExKQuV.jpg" width="600" height="400">
+  </p>
   
   - 今日更新
     - 獲取今日更新動畫連結
-![](https://i.imgur.com/QMBn80W.jpg)
+  <p align=center>
+      <img src="https://i.imgur.com/QMBn80W.jpg" width="600" height="400">
+  </p>
   
   - 本季新番
     - 獲取最近連載動畫連結
-![](https://i.imgur.com/UQZY94n.jpg)
+  <p align=center>
+      <img src="https://i.imgur.com/UQZY94n.jpg" width="600" height="400">
+  </p>
   
   - 搜尋
     - 輸入關鍵字搜尋動畫
     - 獲取相關作品連結
-![](https://i.imgur.com/4v76Frr.jpg)
-![](https://i.imgur.com/XlP2SwE.jpg)
+  <p align=center>
+       <img src="https://i.imgur.com/4v76Frr.jpg" width="600" height="400">
+       <img src="https://i.imgur.com/XlP2SwE.jpg" width="600" height="400">
+  </p>
   
   點擊觀看按鈕可跳至影片連結
-![](https://i.imgur.com/uDzTRSx.jpg)
+  <p align=center>
+      <img src="https://i.imgur.com/uDzTRSx.jpg" width="600" height="400">
+  </p>
   
 ### FSM grapth
-![](https://i.imgur.com/nf5HLi1.png)
+  <p align=center>
+      <img src="https://i.imgur.com/nf5HLi1.png" width="600" height="400">
+  </p>
   
 
 
