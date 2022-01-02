@@ -15,13 +15,9 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["idle", "awake", "command_failed", "new_anim", "search_anim", "today_anim", "hot_anim", "searching"],
+    states=["awake", "command_failed", "new_anim", "search_anim", "today_anim", "hot_anim", "searching"],
     transitions=[
-        {
-            "trigger": "get_msg",
-            "source": "idle",
-            "dest": "awake",
-        },
+
         {
             "trigger": "get_msg",
             "source": "awake",
@@ -64,7 +60,7 @@ machine = TocMachine(
         },
 
     ],
-    initial="idle",
+    initial="awake",
     auto_transitions=False,
     show_conditions=True,
 )
@@ -122,3 +118,4 @@ def show_fsm():
 if __name__ == "__main__":
     port = os.getenv("PORT", None)
     app.run(host="0.0.0.0", port=port, debug=True)
+    #machine.get_graph().draw("fsm.png",prog="dot",format="png")
