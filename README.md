@@ -33,7 +33,7 @@
 - 啟動
   - 進入line聊天介面後，輸入任意文字訊息
   - 取得操作指令，並輸入欲執行功能
-  <p align=center>
+  <p align=left>
     <img src="https://i.imgur.com/MaxErXZ.jpg" width="600" height="400">
   </p>
 - 操作指令
