@@ -10,7 +10,7 @@
 
 > 技術
 >   - 網路爬蟲
->     - B eautifulsoup4
+>     - Beautifulsoup4
 >   - 回應功能
 >     - Line Messaging API
 ## 介紹
