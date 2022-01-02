@@ -68,7 +68,8 @@
       <img src="https://i.imgur.com/uDzTRSx.jpg" width="300" height="600">
   </p>
   
-### FSM grapth
+## FSM grapth
+
   <p align=left>
       <img src="https://i.imgur.com/nf5HLi1.png" width="300" height="200">
   </p>
