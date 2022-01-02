@@ -39,40 +39,40 @@
 - 啟動
   - 進入line聊天介面後，輸入任意文字訊息
   - 取得操作指令，並輸入欲執行功能
-    <p align=left>
-      <img src="https://i.imgur.com/MaxErXZ.jpg" width="300" height="200">
-    </p>
+        <p align=left>
+          <img src="https://i.imgur.com/MaxErXZ.jpg" width="300" height="200">
+        </p>
 - 操作指令
   - 熱門
     - 獲取TOP3人氣動畫連結
-  <p align=left>
-    <img src="https://i.imgur.com/FExKQuV.jpg" width="300" height="800">
-  </p>
+      <p align=left>
+        <img src="https://i.imgur.com/FExKQuV.jpg" width="300" height="800">
+      </p>
   
   - 今日更新
     - 獲取今日更新動畫連結
-  <p align=left>
-      <img src="https://i.imgur.com/QMBn80W.jpg" width="300" height="800">
-  </p>
+      <p align=left>
+          <img src="https://i.imgur.com/QMBn80W.jpg" width="300" height="800">
+      </p>
   
   - 本季新番
     - 獲取最近連載動畫連結
-  <p align=left>
-      <img src="https://i.imgur.com/UQZY94n.jpg" width="300" height="800">
-  </p>
+      <p align=left>
+          <img src="https://i.imgur.com/UQZY94n.jpg" width="300" height="800">
+      </p>
   
   - 搜尋
     - 輸入關鍵字搜尋動畫
     - 獲取相關作品連結
-  <p align=left>
-       <img src="https://i.imgur.com/4v76Frr.jpg" width="300" height="600"><br>
-       <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="150">
-  </p>
+      <p align=left>
+           <img src="https://i.imgur.com/4v76Frr.jpg" width="300" height="600"><br>
+           <img src="https://i.imgur.com/XlP2SwE.jpg" width="300" height="150">
+      </p>
   
   點擊觀看按鈕可跳至影片連結
-  <p align=left>
-      <img src="https://i.imgur.com/uDzTRSx.jpg" width="300" height="600">
-  </p>
+      <p align=left>
+          <img src="https://i.imgur.com/uDzTRSx.jpg" width="300" height="600">
+      </p>
   
 ## FSM grapth
 
